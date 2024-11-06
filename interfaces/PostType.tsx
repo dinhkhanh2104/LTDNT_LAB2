@@ -1,4 +1,4 @@
-export  interface PostType {
+export interface PostType {
     avatarImage: string;
     username: string;
     title: string;

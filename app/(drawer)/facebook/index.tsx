@@ -13,7 +13,7 @@ export default function index() {
   useEffect(() => {
     setData(data1);
   }, []);
-
+  //                      Trần Đình Khánh - 21520984
 
   return (
     <SafeAreaView style={{ flex: 1}}>
@@ -45,14 +45,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-  wrapper: {
-    // flex: 1,
   },
   header: {
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 20,

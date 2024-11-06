@@ -1,5 +1,12 @@
-import { Link, Slot } from 'expo-router';
+import { Slot } from 'expo-router';
+import { AuthProvider } from './authProvider';
 
-const DrawerLayout = () => <Slot />;
+const AuthenLayout = () => {
+  return (
+    <AuthProvider>
+      <Slot />
+    </AuthProvider>
+  );
+};
 
-export default DrawerLayout;
+export default AuthenLayout;

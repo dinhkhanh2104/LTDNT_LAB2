@@ -1,12 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function categories() {
+const categories = () => {
   return (
-    <View>
-      <Text>Categories Screen</Text>
+    <View style = {styles.container}>
+      <Text style = {styles.text}>Categories Screen</Text>
     </View>
   )
 }
+// Trần Đình Khánh - 21520984
+export default categories
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: "400"
+  }
+})

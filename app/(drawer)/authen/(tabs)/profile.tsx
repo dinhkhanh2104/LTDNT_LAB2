@@ -1,12 +1,37 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { useAuth } from '../authProvider';
+import { router } from 'expo-router';
 
-export default function profile() {
+const profile = () => {
+  const { logout } = useAuth();
   return (
-    <View>
-      <Text>Profile Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Profile Screen</Text>
+      <Button
+        title="Sign Out"
+        onPress={() => {
+          logout();
+          router.navigate('/(drawer)/authen/login')
+        }}
+      />
     </View>
-  )
-}
+  );
+};
+// Trần Đình Khánh - 21520984
 
-const styles = StyleSheet.create({})
+export default profile;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    gap: 20,
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: '400',
+  },
+});

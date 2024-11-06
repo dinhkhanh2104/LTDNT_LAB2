@@ -20,6 +20,7 @@ export default function Post({
   const [commentAmount, setCommentAmount] = useState(comment);
   const [shareAmount, setShareAmount] = useState(share);
 
+          // Trần Đình Khánh - 21520984
   const handlePressLike = () => {
     setActive(!active);
     setLikeAmount((prev) => (active ? prev - 1 : prev + 1));
@@ -66,7 +67,7 @@ export default function Post({
         </TouchableOpacity>
       </View>
     </View>
-    // </View>
+    // Trần Đình Khánh - 21520984
   );
 }
 
